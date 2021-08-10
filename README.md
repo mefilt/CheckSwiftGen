@@ -18,18 +18,21 @@ This tool can work with Assets and Localisation. If you need other tools and uti
 
 ```
 gem install CheckSwiftGen
+```
 
 You must pass two args
 1) Path by swiftgen.yml
 2) Path where SwiftGen will made
+
+```
 swiftgen_check_for_new ./swiftgen.yml .
 ```
 
 
-## Intergration with Xсode and cocoapods
-1) You have to make script in Build Phases.
-2) You have to change shell by '/bin/bash -l'
-3) The paste this script in the phase
+## Intergration in Xсode with cocoapods
+1) Select “New Run Script Phase” in Build Phases
+2) Insert '/bin/bash' -l into Shell
+3) Paste this script
 
 ```
 check=$(swiftgen_check_for_new "${PROJECT_DIR}/swiftgen.yml" "${PROJECT_DIR}")
@@ -38,3 +41,5 @@ then
 ${PODS_ROOT}/SwiftGen/bin/swiftgen config run --config ${PROJECT_DIR}/swiftgen.yml
 fi
 ```
+
+![image](https://user-images.githubusercontent.com/1247906/128891065-463064ca-400e-40dc-9674-87e105a3dc55.png)
