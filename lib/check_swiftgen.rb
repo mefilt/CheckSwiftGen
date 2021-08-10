@@ -109,5 +109,5 @@ class CheckSwiftGen
     end
 end
 
-CheckSwiftGen.new.cache_invalidate(ARGV[0], ARGV[1])
+
 
