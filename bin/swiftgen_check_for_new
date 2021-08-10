@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'check_swiftgen'
-puts(CheckSwiftGen.new.swiftgen_check(ARGV[0], ARGV[1]))
+puts(CheckSwiftGen.new.check_for_new(ARGV[0], ARGV[1]))

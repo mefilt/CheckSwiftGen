@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name        = 'CheckSwiftGen'
-    s.version     = '0.0.11'
+    s.version     = '0.0.12'
     s.summary     = "Hola!"
     s.description = "A simple checking for repeat call swiftgen"
     s.authors     = ["Ruslan Prokofev"]
