@@ -1,23 +1,18 @@
 # SwiftGen Cache
 
-Hi Guys & Girls!
+Hi Guys!
 
-The Swiftgen have been problem with performance when the 'Assets' are large.
-I was very angry when my project rebuild build every one.
-I understood what swiftgen generate files every time then xcode rebuild cache.
+SwiftGen has a problem with performance when the 'Assets' are large.
+I was very angry when my project rebuilds every time. 
+I have discovered that Swiftgen re-generates files which lead xcode to rebuild it’s cache.
+I made a tool to help with this problem.
 
-I make tool for help with this problem.
+The tool produces a file SwiftGen.lock. 
+This file has a hash of every file registered in SwiftGen.
+Next time when you build a project, this tool will create a temporary file SwiftGen.lock.tmp that is a copy of SwiftGen.tmp including hashes of the new files.
 
-The tool make the file SwiftGen.lock. The file has hash every one file from which was generate 'Swift code'.
-
-When next time you build project, the tool make temp file SwiftGen.lock.tmp which made like SwiftGen.lock but with hash with new files.
-
-if hash by SwiftGen.lock.tmp is not equal hash by SwiftGen.lock then the tools return 'true' and you need to call SwiftGen.
-
-This tool could work with Assets and Localisation.
-If you need other resource, write to me.
-
-
+If hashes of corresponding files are not equal in SwiftGen.lock.tmp and SwiftGen.lock, the tool is going to return “true” which means that you need to execute SwiftGen.
+This tool can work with Assets and Localisation. If you need other tools and utilities, contact me.
 
 ## Installation
 
