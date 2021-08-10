@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'check_swiftgen'
-puts(CheckSwiftGen.new.cache_invalidate(ARGV[0], ARGV[1]))

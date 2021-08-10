@@ -7,15 +7,15 @@ require 'yaml'
 
 class CheckSwiftGen
 
-    def cache_invalidate(configuration_file, lock_path) 
+    def swiftgen_check(configuration_file, lock_path) 
 
         if File.file?("#{configuration_file}") == false       
-            puts("Configuration File not found")
+            puts("Configuration file didn`t found")
             return
         end
 
         if lock_path.nil? {}
-            puts("Please input the lock path")
+            puts("Path for save file of lock didnt found")
             return
         end
 
