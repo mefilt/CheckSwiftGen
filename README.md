@@ -31,7 +31,7 @@ swiftgen_check_for_new ./swiftgen.yml .
 ```
 
 
-## Intergration with XCode and cocoapods
+## Intergration with Xсode and cocoapods
 1) You have to make script in Build Phases.
 2) You have to change shell by '/bin/bash -l'
 3) The paste this script in the phase
