@@ -7,7 +7,7 @@ require 'yaml'
 
 class CheckSwiftGen
 
-    def swiftgen_check(configuration_file, lock_path) 
+    def check_for_new(configuration_file, lock_path) 
 
         if File.file?("#{configuration_file}") == false       
             puts("Configuration file didn`t found")
@@ -44,7 +44,7 @@ class CheckSwiftGen
                     lock_path
                 )
     end
-
+    
     def exist_new_files(assets_map, strings_map, lock_path)
 
         tmp_name_file = "SwiftGen.tmp.lock"
